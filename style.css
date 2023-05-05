@@ -1,0 +1,302 @@
+:root {
+    --border-color: #f56a6a;
+    --font-family: 'Lato', sans-serif;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.navbar {
+    background: url("./image/photo-1516724562728-afc824a36e84.jpg") no-repeat;
+    background-size: cover;
+    background-position: left center;
+}
+
+/* sidebar section */
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 325px;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.sidebar.active {
+    width: 0;
+    opacity: 0;
+}
+
+.sidebar .sidebar-header .form-control {
+    border: 3px solid transparent;
+}
+
+.sidebar .sidebar-header .form-control:focus {
+    border: 3px solid var(--border-color);
+    box-shadow: none;
+}
+
+.sidebar-title {
+    position: relative;
+}
+
+.sidebar-title .sidebar-border {
+    width: 50%;
+    position: absolute;
+    border: 2px solid var(--border-color);
+}
+
+.accordion {
+    cursor: pointer;
+    border: none;
+    position: relative;
+    transition: .5s ease;
+    color: #8b8686;
+}
+
+.accordion::before {
+    position: absolute;
+    content: "\2b";
+    right: 0;
+    bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.accordion.active::before {
+    content: "\2d"
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.sidebar-content {
+    margin: 3rem 0;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 2rem;
+}
+
+.sidebar-content-1 p:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar-content-1 p {
+    padding-bottom: 13px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.sidebar-content-1 p a {
+    transition: .2s ease;
+    color: #8b8686;
+}
+
+.sidebar-content-1 p a:hover {
+    color: var(--border-color);
+}
+
+.sidebar-content-1 .panel {
+    flex-direction: column;
+    background: transparent;
+    gap: 0.8rem;
+    margin: 1.4rem 0;
+}
+
+.sidebar-body .panel>span {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #818181;
+    font-weight: 550;
+}
+
+.sidebar-content-2 .d-flex {
+    margin-top: 2rem;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+
+.sidebar-content-2 .d-flex p {
+    font-size: 0.9rem;
+}
+
+.sidebar-content-2 .d-flex img {
+    transition: .5s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.sidebar-content-2 .d-flex img:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.btn {
+    border: 2px solid var(--border-color);
+    color: var(--border-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #ec7e7e56;
+}
+
+.sidebar-footer {
+    border-bottom: 3px solid #ddd;
+}
+
+.sidebar-footer .sidebar-contact p:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 17px;
+}
+
+.sidebar-footer .sidebar-contact p i {
+    margin-right: 5px;
+    color: var(--border-color);
+}
+
+.sidebar-footer .sidebar-contact p a {
+    color: #444;
+    font-size: 0.8rem;
+}
+
+.footer-text p {
+    font-size: 0.8rem;
+    color: #444;
+}
+
+.footer-text p a {
+    color: #444;
+    border-bottom: 1px dotted #444;
+}
+
+.footer-text p a:hover {
+    color: var(--border-color);
+}
+
+.saidbar-open {
+    font-size: 1.5rem;
+    color: var(--border-color);
+    cursor: pointer;
+}
+
+.sidebar-fixed.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 325px;
+    height: 100%;
+    background-color: #F8F9FA;
+}
+
+.main {
+    margin-left: 350px;
+    transition: 1s ease;
+}
+
+.main>.container {
+    padding: 0 4rem;
+}
+
+.main.active {
+    margin-left: 0px;
+}
+
+.main .row .content-title {
+    border-bottom: 5px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+.main .row .content-title h6 {
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.main .row .content-title h6:hover span {
+    color: var(--border-color) !important;
+}
+
+.main .row .content-title h6:hover {
+    color: var(--border-color);
+}
+
+.main .row .content-title .icons i {
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    color: #888;
+    transition: all .2s ease;
+}
+
+.main .row .content-title .icons i:hover {
+    color: var(--border-color);
+    cursor: pointer;
+}
+
+.main .content {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5rem;
+}
+
+@media only screen and (max-width: 1084px) {
+    .main {
+        margin-left: 0 !important;
+    }
+
+    .saidbar-open {
+        position: fixed;
+        top: 20px;
+        right: 25px;
+        z-index: 99;
+    }
+}
+
+
+@media (max-width: 410px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .main .content-title .d-flex {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 1084px) {
+    .sidebar {
+        position: fixed;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        z-index: 22;
+    }
+
+    .sidebar-fixed.active {
+        position: static;
+    }
+}
